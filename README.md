@@ -26,3 +26,9 @@ if __name__ == '__main__':
      elif selection["OPTION_SELECTED"] == "divide":
           print(var1/var2)
 ```
+
+## Paremeters
+
+- options: A dict or list of the questions. Using a dict will allow you to the value of what is returned and a list will return the same as what you put in
+- title: a string containing what text is displayed above the questions
+- multiselect: a boolean that, when true, allows users to enter multiple inputs using space to not
