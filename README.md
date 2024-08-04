@@ -14,17 +14,22 @@ PySelect is a Python library that provides a flexible selection interface for mu
 from PySelect.select import select
 
 if __name__ == '__main__':
-     var1=1
-     var2=1
-     selection = select(title=f"What would you like to do with {var1} and {var2}?", options={"Add": "add", "Subtract": "subtract", "Multiply": "multiply", "Divide": "divide"})
-     if selection["OPTION_SELECTED"] == "add":
-          print(var1+var2)
-     elif selection["OPTION_SELECTED"] == "subtract":
-          print(var1+var2)
-     elif selection["OPTION_SELECTED"] == "multiply":
-          print(var1*var2)
-     elif selection["OPTION_SELECTED"] == "divide":
-          print(var1/var2)
+    var1 = 1
+    var2 = 1
+    selection = select(
+        title=f"What would you like to do with {var1} and {var2}?",
+        options={"Add": "add", "Subtract": "subtract", "Multiply": "multiply", "Divide": "divide"}
+    )
+    
+    option = selection["OPTION_SELECTED"]
+    if option == "add":
+        print(var1 + var2)
+    elif option == "subtract":
+        print(var1 - var2)
+    elif option == "multiply":
+        print(var1 * var2)
+    elif option == "divide":
+        print(var1 / var2)
 ```
 
 ## Paremeters
@@ -35,7 +40,7 @@ The python code below shows a dictionary that shows all of the settings that can
 ```python
 settings = {
     'cursor_settings': {
-        # These settings can be customized for cursor appearance and behavior, unused right now
+        # Custom settings for cursor appearance and behavior (currently unused)
     },
     'selection_symbols': {
         'selected_symbol': '->',               # Symbol for the selected option
