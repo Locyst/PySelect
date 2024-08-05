@@ -29,7 +29,7 @@
 >>> 1
 ```
 
-## Paremeters
+## Parameters
 
 - `options`: A list of options to pick from.
 - `title`: (optional) a title above the list of options
